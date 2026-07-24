@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CyberOS</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="bgTerminal"></div>
+
+<!-- ===== Boot / welcome screen ===== -->
+<div id="boot">
+  <div class="spinner">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  <h1 id="bootTitle">CyberOS</h1>
+  <p id="bootLog"></p>
+</div>
+
+<!-- ===== Desktop ===== -->
+<div id="desktop">
+
+  <div id="topbar">
+    <p id="osName">CyberOS</p>
+    <div id="searchBar">
+      <input type="text" id="searchInput" placeholder="Search apps... (Ctrl/Cmd-K)" />
+      <div id="searchResults"></div>
+    </div>
+    <div id="topbarRight">
+      <button id="welcomeReopen" title="Reopen Secure ID">Secure ID</button>
+      <p id="timeElement"></p>
+    </div>
+  </div>
+
+  <!-- floating node-graph desktop (ambient layer, z-index 2 — see style.css) -->
+  <canvas id="graphCanvas"></canvas>
+
+  <!-- CircleMenu launcher -->
+  <div id="circleMenu"></div>
+
+  <!-- ===== Windows ===== -->
+
+  <div class="window wide" id="cryptolab">
+    <div class="windowheader" id="cryptolabheader">
+      <p class="windowtitle">Cryptography Lab</p>
+      <div class="window-controls">
+        <button class="minbutton">&#8211;</button>
+        <button class="maxbutton">&#9634;</button>
+        <button class="closebutton">&times;</button>
+      </div>
+    </div>
+    <div class="windowbody single" id="cryptolabbody"></div>
+  </div>
+
+  <div class="window wide" id="terminal">
+    <div class="windowheader" id="terminalheader">
+      <p class="windowtitle">Terminal</p>
+      <div class="window-controls">
+        <button class="minbutton">&#8211;</button>
+        <button class="maxbutton">&#9634;</button>
+        <button class="closebutton">&times;</button>
+      </div>
+    </div>
+    <div class="windowbody single" id="terminalbody"></div>
+  </div>
+
+  <div class="window wide" id="dashboard">
+    <div class="windowheader" id="dashboardheader">
+      <p class="windowtitle">Dashboard</p>
+      <div class="window-controls">
+        <button class="minbutton">&#8211;</button>
+        <button class="maxbutton">&#9634;</button>
+        <button class="closebutton">&times;</button>
+      </div>
+    </div>
+    <div class="windowbody single" id="dashboardbody"></div>
+  </div>
+
+  <div class="window" id="calc">
+    <div class="windowheader" id="calcheader">
+      <p class="windowtitle">Calculator</p>
+      <div class="window-controls">
+        <button class="minbutton">&#8211;</button>
+        <button class="maxbutton">&#9634;</button>
+        <button class="closebutton">&times;</button>
+      </div>
+    </div>
+    <div class="windowbody single" id="calcbody"></div>
+  </div>
+
+  <div class="window wide" id="explorer">
+    <div class="windowheader" id="explorerheader">
+      <p class="windowtitle">Cyber Explorer</p>
+      <div class="window-controls">
+        <button class="minbutton">&#8211;</button>
+        <button class="maxbutton">&#9634;</button>
+        <button class="closebutton">&times;</button>
+      </div>
+    </div>
+    <div class="windowbody single" id="explorerbody">
+      <p class="explorer-hint">Curated cybersecurity resources, one per tile. Drag the sphere to spin &middot; let go on a tile to open its card &middot; type below to filter.</p>
+      <input type="text" id="explorerSearch" placeholder="Filter resources..." />
+      <canvas id="explorerCanvas"></canvas>
+      <h2 id="explorerCardTitle" class="face-title inactive"></h2>
+      <p id="explorerCardDesc" class="face-description inactive"></p>
+      <a id="explorerCardLink" class="action-button inactive" href="#" target="_blank" rel="noopener">&#8599;</a>
+    </div>
+  </div>
+
+  <div class="window" id="welcome">
+    <div class="windowheader" id="welcomeheader">
+      <p class="windowtitle">Secure ID</p>
+      <div class="window-controls">
+        <button class="minbutton">&#8211;</button>
+        <button class="maxbutton">&#9634;</button>
+        <button class="closebutton">&times;</button>
+      </div>
+    </div>
+    <div class="windowbody single" id="welcomebody"></div>
+  </div>
+
+  <div id="taskbar"></div>
+
+</div>
+
+<script type="module" src="background.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gl-matrix@3.4.3/gl-matrix-min.js"></script>
+<script src="resources.js"></script>
+<script src="script.js"></script>
+<script src="apps.js"></script>
+<script src="cryptolab.js"></script>
+<script src="terminal.js"></script>
+<script src="dashboard.js"></script>
+<script src="desktop.js"></script>
+<script src="explorer.js"></script>
+<script src="reflective.js"></script>
+</body>
+</html>

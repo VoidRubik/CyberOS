@@ -1,0 +1,33 @@
+Memory--> MESSAGE "HELLO"
+Check length and used letter
+"array goes from [0] to [4] and uses H, E , L , O
+So we basically don't use these letters for scambaling
+HELLO
+v
+H
+HE
+HEL
+HELL
+HELLO
+
+5 FRAMES frames
+
+HELLO
+-Scrabmle in 5 different ways
+2$%/p
+&(/¨*
+!"S$G
+:&/U@
+?¡&/#
+
+And slowly fuse and replace the to animations character by character from
+ the first algorith to the second
+
+ H$%/p
+ HE/¨*
+ HEL$G
+ HELL@
+ HELLO
+[/#"!
+ and so on till we get the full message "HELLO"
+ Passing through the animation
