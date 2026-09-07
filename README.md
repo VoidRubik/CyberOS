@@ -4,6 +4,12 @@ A personal, web-based operating system built for the Hack Club [webOS](https://j
 
 **Live demo:** https://voidrubik.github.io/CyberOS/
 
+![CyberOS desktop with the Secure ID access card and the floating app node graph](docs/screenshots/desktop.png)
+
+| Node graph | Cryptography Lab |
+|---|---|
+| ![Floating node graph of apps](docs/screenshots/node-graph.png) | ![Caesar cipher running in the Cryptography Lab](docs/screenshots/cryptolab.png) |
+
 ## Desktop
 
 - **Boot sequence** with a looping scramble-reveal ("decrypting") title animation, then a WELCOME, OPERATOR access screen.
