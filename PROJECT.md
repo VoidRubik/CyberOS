@@ -49,4 +49,4 @@ Every app is driven by a single `APPS` manifest — removing or merging an app n
 
 Plan → hostile review (findings folded before building) → build → **live browser verification of every change**, using real state checks rather than screenshots alone. Two real bugs were root-caused this way: an unescaped `&` in a label producing invalid SVG that silently blanked the WebGL sphere, and a radial-menu z-order/`pointer-events` bug that ate every trigger click.
 
-Memory node: `second-brain/Knowledge/projects/cyberos.md`.
+Memory node: `brain/situational/memory/cyberos.md`.
